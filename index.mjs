@@ -1,8 +1,8 @@
 // let Shapes = require('./Shapes.js').Shapes;
-import makeRequest from "./lib/makeRequest";
-import SubAccounts from "./lib/SubAccounts";
-import Templates from "./lib/Templates";
-import Marketplace from "./lib/Marketplace";
+import makeRequest from "./lib/makeRequest.js";
+import SubAccounts from "./lib/SubAccounts.js";
+import Templates from "./lib/Templates.js";
+import Marketplace from "./lib/Marketplace.js";
 
 class Contracts {
 

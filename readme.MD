@@ -3,15 +3,15 @@
 
 Use [Easyly sign](http://sign.easyly.com) as an ES module.
 
-[![build status](https://img.shields.io/npm/l/contracter-js)](https://www.npmjs.com/package/contracter-js)
-[![npm version](https://img.shields.io/npm/v/contracter-js)](https://www.npmjs.com/package/contracter-js)
+[![build status](https://img.shields.io/npm/l/@easyly/sign-js)](https://www.npmjs.com/package/@easyly/sign-js)
+[![npm version](https://img.shields.io/npm/v/@easyly/sign-js)](https://www.npmjs.com/package/@easyly/sign-js)
 
 ## Installation
 
-Use `npm` to install the Contracter.js module:
+Use `npm` to install the module:
 
 ```sh
-npm install contracter-js
+npm install @easyly/sign-js
 ```
 
 
@@ -21,7 +21,7 @@ npm install contracter-js
 
 You can access all available function by importing and initializing ContractsJS class with your [Api Key](http://sign.easyly.com) from your account
 ```js
-import ContractsJS from 'contracter-js';
+import ContractsJS from '@easyly/sign-js';
 
 const apiKey = "XXXXXXXXXXXXXXXXXXXX";
 const contracts = new ContractsJS(apiKey);
@@ -30,7 +30,7 @@ const contracts = new ContractsJS(apiKey);
 ### Get contracts example
 
 ```js
-import ContractsJS from 'contracter-js';
+import ContractsJS from '@easyly/sign-js';
 
 const apiKey = "XXXXXXXXXXXXXXXXXXXX";
 const contracts = new ContractsJS(apiKey);
