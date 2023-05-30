@@ -12,16 +12,18 @@ class Contracts {
         this.subKey = subKey;
         this.options = { ...options };
 
-        this.subAccounts = new SubAccounts(key,subKey);
-        this.templates = new Templates(key,subKey);
-        this.marketplace = new Marketplace(key,subKey);
+        this.makeRequest = makeRequest;
+
+        this.subAccounts = new SubAccounts(this.makeRequest,key,subKey);
+        this.templates = new Templates(this.makeRequest,key,subKey);
+        this.marketplace = new Marketplace(this.makeRequest,key,subKey);
     }
 
     getAll() {
         let isKeyValidated = true;//utils.checkKey(this.key);
         if(!isKeyValidated){return false;}
 
-        return makeRequest(this.key,this.subKey,{
+        return this.makeRequest(this.key,this.subKey,{
             method: 'GET',
             path: '/contracts',
         });
@@ -30,7 +32,7 @@ class Contracts {
         let isKeyValidated = true;//utils.checkKey(this.key);
         if(!isKeyValidated){return false;}
 
-        return makeRequest(this.key,this.subKey,{
+        return this.makeRequest(this.key,this.subKey,{
             method: 'GET',
             path: '/contracts/'+contractKey,
         });
@@ -39,7 +41,7 @@ class Contracts {
         let isKeyValidated = true;//utils.checkKey(this.key);
         if(!isKeyValidated){return false;}
 
-        return makeRequest(this.key,this.subKey,{
+        return this.makeRequest(this.key,this.subKey,{
             method: 'DELETE',
             path: '/contracts/'+contractKey,
         });
