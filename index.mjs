@@ -37,6 +37,41 @@ class Contracts {
             path: '/contracts/'+contractKey,
         });
     }
+    addContact(contractKey,name,email) {
+        let isKeyValidated = true;//utils.checkKey(this.key);
+        if(!isKeyValidated){return false;}
+
+        return this.makeRequest(this.key,this.subKey,{
+            method: 'POST',
+            path: '/contracts/'+contractKey+"/contacts",
+            body: {
+                name:name,
+                email:email
+            }
+        });
+    }
+    updateContact(contractKey,contactId,name,email) {
+        let isKeyValidated = true;//utils.checkKey(this.key);
+        if(!isKeyValidated){return false;}
+
+        return this.makeRequest(this.key,this.subKey,{
+            method: 'POST',
+            path: '/contracts/'+contractKey+"/contacts/"+contactId,
+            body: {
+                name:name,
+                email:email
+            }
+        });
+    }
+    deleteContact(contractKey,contactId) {
+        let isKeyValidated = true;//utils.checkKey(this.key);
+        if(!isKeyValidated){return false;}
+
+        return this.makeRequest(this.key,this.subKey,{
+            method: 'DELETE',
+            path: '/contracts/'+contractKey+"/contacts/"+contactId
+        });
+    }
     delete(contractKey) {
         let isKeyValidated = true;//utils.checkKey(this.key);
         if(!isKeyValidated){return false;}
