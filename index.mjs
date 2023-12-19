@@ -69,7 +69,7 @@ class Contracts {
 
         return this.makeRequest(this.key,this.subKey,{
             method: 'DELETE',
-            path: `/contracts/${envelopeId}/contacts/${contactId}`
+            path: `/envelopes/${envelopeId}/contacts/${contactId}`
         });
     }
     delete(contractKey) {

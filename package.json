@@ -1,7 +1,7 @@
 {
   "name": "@easyly/sign-js",
   "description": "JS package for Easyly sign by Easyly",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "homepage": "https://github.com/Easyly-io/Sign-js#readme",
   "author": "Niv Apo",
   "type": "module",
