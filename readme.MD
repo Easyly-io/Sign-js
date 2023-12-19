@@ -58,5 +58,5 @@ version, we recommend using legacy.
 
 ### Contributing
 
-If you would like to contribute to React Stripe.js, please make sure to read our
+If you would like to contribute to React Easyly.js, please make sure to read our
 [contributor guidelines](CONTRIBUTING.md).

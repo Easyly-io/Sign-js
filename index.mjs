@@ -37,39 +37,39 @@ class Contracts {
             path: '/contracts/'+contractKey,
         });
     }
-    addContact(contractKey,name,email) {
+    addContact(envelopeId,name,email) {
         let isKeyValidated = true;//utils.checkKey(this.key);
         if(!isKeyValidated){return false;}
 
         return this.makeRequest(this.key,this.subKey,{
             method: 'POST',
-            path: '/contracts/'+contractKey+"/contacts",
+            path: `/envelopes/${envelopeId}/contacts`,
             body: {
                 name:name,
                 email:email
             }
         });
     }
-    updateContact(contractKey,contactId,name,email) {
+    updateContact(envelopeId,contactId,name,email) {
         let isKeyValidated = true;//utils.checkKey(this.key);
         if(!isKeyValidated){return false;}
 
         return this.makeRequest(this.key,this.subKey,{
             method: 'POST',
-            path: '/contracts/'+contractKey+"/contacts/"+contactId,
+            path: `/envelopes/${envelopeId}/contacts/${contactId}`,
             body: {
                 name:name,
                 email:email
             }
         });
     }
-    deleteContact(contractKey,contactId) {
+    deleteContact(envelopeId,contactId) {
         let isKeyValidated = true;//utils.checkKey(this.key);
         if(!isKeyValidated){return false;}
 
         return this.makeRequest(this.key,this.subKey,{
             method: 'DELETE',
-            path: '/contracts/'+contractKey+"/contacts/"+contactId
+            path: `/contracts/${envelopeId}/contacts/${contactId}`
         });
     }
     delete(contractKey) {
