@@ -28,6 +28,15 @@ class Contracts {
             path: '/contracts',
         });
     }
+    getStats() {
+        let isKeyValidated = true;//utils.checkKey(this.key);
+        if(!isKeyValidated){return false;}
+
+        return this.makeRequest(this.key,this.subKey,{
+            method: 'GET',
+            path: '/contracts/stats',
+        });
+    }
     get(contractKey) {
         let isKeyValidated = true;//utils.checkKey(this.key);
         if(!isKeyValidated){return false;}
